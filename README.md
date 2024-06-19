@@ -26,6 +26,8 @@ Pauline
 
 [Describe your analysis methods and include any visualizations or graphics that you used to present your findings. Explain the insights that you gained from your analysis and how they relate to your research question or problem statement.]
 
+First, we decided to look for the top 5 sectors that receive the most allocations from the DAC countries, these are the prvlieged sectors: Education
+
 Raphaela (DAC) and Roger (China)
 
 ## Results
