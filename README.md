@@ -5,12 +5,9 @@
 
 [Enter a brief description of your project, including the data you used and the analytical methods you applied. Be sure to provide context for your project and explain why it is important.]
 
-Development aids are growing for the past decades, more recently, China appears to be a big donators, alongside the countries from the Development Assistance Committee (DAC).  Our project is a comparison between the Official Development Assistance (ODA) flows of the Development Assistance Committe (DAC) and ODA of China, with a focus on the sectors these two groups donate to.  Through this projet we aim looking at the influence of the GDP to the amounts of ODA flows that one sectors gets.  As China announced that it wanted to take an alternative path the development, we came to ask ourselves Do economic recessions have a greater impact on the education sector when donors are DAC countries rather than China ?  Through regression analysis, we will bring some tools to anszwer these kind of questions.
-This project is based on the dataset retrieved from the OECD data bank and <<please Roger write something for China>>, 
-
-
-
-are growing, but there are inconsistencies hence the project aims to analyse the dynamics of Official Development Assistance (ODA) to uncover patterns, trends, and priorities in international development funding.
+  Development aid has been growing for the past decades, and more recently, China appears to be a big donator, alongside the countries from the Development Assistance Committee (DAC).  Our project is a comparison between the Official Development Assistance (ODA) flows of the Development Assistance Committee (DAC) and the ODA of China, with a focus on the sectors these two groups donate to.  Through this project we aim to look at the influence of the GDP on the amounts of ODA flows that one sector gets.  As China announced that it wanted to take an alternative path the development, we came to ask ourselves Do economic recessions have a greater impact on the education sector when donors are DAC countries rather than China?  Through regression analysis, we will bring some tools to answer these kinds of questions.
+  This project is based on the dataset retrieved from the OECD data bank and China's data is based on Version 3 of Aidata (2024), which previous studies such as Guillon et al. (2020) used, as China is not one of the DAC countries and of course its ODA isn't considered as ODA by these DAC countries. Because of the strict definition of ODA, previous studies either focus on DAC countries or emerging donors, such as China. China has been known for challenging the way how DAC advocates and allocates ODA, and has been reshaping it with its characteristics. (Bräutigam, 2011) In this sense, this project attempts to converge and compare the ODA in two approaches. Most importantly, this project found China mainly allocated its ODA to the economic sectors in the findings of Guillon et al, (2020) so that's one of the incentives to have this project. Moreover, given the official report about ODA from OECD (2023), ODAs are growing because of COVID-19 and the Ukraine-Russia war, but there are inconsistencies hence the project aims to analyze the dynamics of Official Development Assistance (ODA) to uncover patterns, trends, and priorities in international development funding.
+  In short, this project is going to scrutinize the donors' data to analyze how donors allocate their ODA to different sectors, which is the most correlated with donors' GDP. 
 
 ## Getting Started
 
@@ -28,7 +25,10 @@ Pauline
 
 First, we decided to look for the top 5 sectors that receive the most allocations from the DAC countries, these are the prvlieged sectors: Education
 
-Raphaela (DAC) and Roger (China)
+Raphaela (DAC) and 
+
+For China, 
+the top 5 sectors are (1) banking and financial services, (2)energy, (3)industry, mining, construction, (4) other multisector, and (5) transportation and storage. In addit
 
 ## Results
 
