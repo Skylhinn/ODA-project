@@ -23,18 +23,47 @@ Pauline
 
 [Describe your analysis methods and include any visualizations or graphics that you used to present your findings. Explain the insights that you gained from your analysis and how they relate to your research question or problem statement.]
 
-First, we decided to look for the top 5 sectors that receive the most allocations from the DAC countries, these are the prvlieged sectors: Education
+1. First, we decided to look for the top 5 sectors that receive the most allocations in order to see the donors priorities
 
-Raphaela (DAC) and 
+# ~~ **DAC COUNTRIES** ~~
+For the DAC countries, we aggregated the values of the allocations by year and took the 5 sectors that recieve the most allocations. The results are (1)Governement and society, (2)Emergency response, (3)Education, (4)Population policies/programmes (5)Health. We can see that the DAC countries focus more on the **social sectors**. 
 
+![]
 
-  
+# ~~ **CHINA** ~~
+
   For China, the top 5 sectors are (1) banking and financial services, (2)energy, (3)industry, mining, construction, (4) other multisector, and (5) transportation and storage. Figure 4. shows that the line of other multisector skyrocketed from around 2015 to 2018, and this project took a closer look and found the reason why it is defined as a "multisector" because it encompasses many sectors at the same time, such as education and transportation, infrastructure projects, and even economics, production, and social sectors at the same time, etc. Most importantly, this project found that for instance, the majority of recipients under the other multisector are invited to the Belt and Road Initiative, except for Mauritius, Gaza, etc, or cross multiple nations. 
 
 Figure 5.
 ![sectors_result](https://github.com/Skylhinn/ODA-project/assets/172566692/6ad2caec-9970-447f-b17d-562f3f0157f7)
 
-  In addition, this project ran the regression analysis to figure out which specific sector has the most significant impact on China's ODA, and it turned out to be the sector of transportation and storage. (p<0.001) This project further delves into the correlation coefficient relationship between the ODA in the sector and transportation and storage and GDP. Figure 6. depicts the significant correlation coefficient effect of the sector of transportation on China's GDP. (R=0.53**) Namely, the more amount on transportation and storage, the higher GDP China may accomplish. 
+
+2. REGRESSION ANALYSIS 
+
+We decided to ran a regression analysis to see which sectors are more affected by the donors country GDP. We also chose 3 control variables: the average employment rate, the average human development index and the average Debt/gdp ratio. 
+
+# ~~ **DAC COUNTRIES** ~~
+
+For DAC countries we chose the dates 2004-2019 because they have less data missing 
+**Dependent variable**: Allocations by sector
+**Independent variable**:
+- Average Growth Rate of DAC countries
+**Control variables**: 
+- Average Employment Rate of DAC countries
+- Average Human Development Index of DAC countries
+- Average Debt/GDP ratio of DAC countries
+
+The results of the regression showed that for many sectors there is a negative coefficient for the growth rate, this implies that higher growth rates in donor countries are associated with lower ODA allocations to various sectors. Nevertheless the relationship in many cases is non-significant (Sectors with statistically significant results (p-value < 0.05))
+
+Lets focus on a sector that with a strong statistical significance (significant at the 1% level (p < 0.01).) and a high coefficient that suggests a reliable negative relationship: **“EDUCATION“** and **“Other social infrastructures“**
+
+So we conclude that for DAC countries, the sectors that are the most affected by GDP variations are **Education** and **Other social infrastructures and services**
+
+
+
+# ~~ **CHINA** ~~
+
+For China, we ran the regression analysis to figure out which specific sector has the most significant impact on China's ODA, and it turned out to be the sector of **transportation and storage**. (p<0.001) This project further delves into the correlation coefficient relationship between the ODA in the sector and transportation and storage and GDP. Figure 6. depicts the significant correlation coefficient effect of the sector of transportation on China's GDP. (R=0.53**) Namely, the more amount on transportation and storage, the higher GDP China may accomplish. 
 
 Figure 6
 ![Trans and GDP](https://github.com/Skylhinn/ODA-project/assets/172566692/1cb6da3d-6eba-47fd-8e64-67127b94103b)
