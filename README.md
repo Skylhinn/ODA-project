@@ -3,15 +3,14 @@
 
 ## Project Description
 
-[Enter a brief description of your project, including the data you used and the analytical methods you applied. Be sure to provide context for your project and explain why it is important.]
 
   Development aid has been growing for the past decades, and more recently, China appears to be a big donator, alongside the countries from the Development Assistance Committee (DAC).  Our project is a comparison between the Official Development Assistance (ODA) flows of the Development Assistance Committee (DAC) and the ODA of China, with a focus on the sectors these two groups donate to.  Through this project we aim to look at the influence of the GDP on the amounts of ODA flows that one sector gets.  As China announced that it wanted to take an alternative path the development, we came to ask ourselves Do economic recessions have a greater impact on the education sector when donors are DAC countries rather than China?  Through regression analysis, we will bring some tools to answer these kinds of questions.
   This project is based on the data retrieved from the OECD data bank and China's data is based on Version 3 of Aidata (2024), which previous studies such as Guillon et al. (2020) used, as China is not one of the DAC countries and of course its ODA isn't considered as ODA by these DAC countries. Because of the strict definition of ODA, previous studies either focus on DAC countries or emerging donors, such as China. China has been known for challenging the way how DAC advocates and allocates ODA, and has been reshaping it with its characteristics. (Bräutigam, 2011) In this sense, this project attempts to converge and compare the ODA in two approaches. Most importantly, this project found China mainly allocated its ODA to the economic sectors in the findings of Guillon et al, (2020) so that's one of the incentives to have this project. Moreover, given the official report about ODA from OECD (2023), ODAs are growing because of COVID-19 and the Ukraine-Russia war, but there are inconsistencies hence the project aims to analyze the dynamics of Official Development Assistance (ODA) to uncover patterns, trends, and priorities in international development funding.
   In short, this project is going to scrutinize the donors' data to analyze how donors allocate their ODA to different sectors, which is the most correlated with donors' GDP. 
 
-## Getting Started
 
-[Provide instructions on how to get started with your project, including any necessary software or data. Include installation instructions and any prerequisites or dependencies that are required.]
+
+## Getting Started
 
 For this project, we use R studio with packages such as dyplr, ggplot2, <<Roger and Raphis put the main packages you used>>.
 ###Data cleaning###
@@ -25,15 +24,14 @@ China’s dataset also provides the columns `Description` and `Staff Comments` t
 In order to conduct our regression analysis, we have to make sure that there is no unknown value for the DAC countries dataset; in order to do so, we transform the dataframe into a wide format, and filtered out the missing data.  Finally we converted back to a long format. 
 
 
-
 **Visualisation of the top receiving sectors**
 To better visualise China’s donations, we use ggplot to look at the top 10 and then top 5 receiving sectors.  
 
 Looking at China top receiving sectors, we realise that the sector « Other Multisector » is amoung one of the largest receiving sector, hence we look at every description of every donation of the year 2017, especially for the African continents because it is the year that records the largest donations.
 
 
-###Getting ready for the regression analysis###
 
+###Getting ready for the regression analysis###
 
 **GDP**
 We get the information of about China’s GDP from the WB dataset.  
@@ -57,11 +55,11 @@ Finally we added the average GDP growth rate of DAC countries to our dataframe, 
 
 ## File Structure
 
-Attached to this project, you can find our R script and all the original datasets we used in a file called _data sets_
+Attached to this project, you can find our R script and all the original datasets we used in a file called _data sets_.
+
+
 
 ## Analysis
-
-[Describe your analysis methods and include any visualizations or graphics that you used to present your findings. Explain the insights that you gained from your analysis and how they relate to your research question or problem statement.]
 
 1. First, we look for the top 5 sectors that receive the most allocations in order to see the donors priorities.
 
