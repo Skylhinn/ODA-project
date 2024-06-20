@@ -71,9 +71,6 @@ Figure 2:
 
 
 
-Figure 3.
-![sectors_result](https://github.com/Skylhinn/ODA-project/assets/172566692/6ad2caec-9970-447f-b17d-562f3f0157f7)
-
 
 2. REGRESSION ANALYSIS 
 
