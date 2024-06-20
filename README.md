@@ -23,24 +23,32 @@ Pauline
 
 [Describe your analysis methods and include any visualizations or graphics that you used to present your findings. Explain the insights that you gained from your analysis and how they relate to your research question or problem statement.]
 
-1. First, we decided to look for the top 5 sectors that receive the most allocations in order to see the donors priorities
+1. First, we look for the top 5 sectors that receive the most allocations in order to see the donors priorities.
 
 # ~~ **DAC COUNTRIES** ~~
-For the DAC countries, we aggregated the values of the allocations by year and took the 5 sectors that recieve the most allocations. The results are (1)Governement and society, (2)Emergency response, (3)Education, (4)Population policies/programmes (5)Health. We can see that the DAC countries focus more on the **social sectors**. 
+For the DAC countries, we aggregate the values of the allocations by year and identify the five sectors that receive the most funding. The results are (1) Government and society, (2) Emergency response, (3) Education, (4) Population policies/programmes, and (5) Health. This demonstrates that DAC countries focus more on social sectors, as shown in Figure 1.
 
-![]
+Figure 1: 
+<img width="541" alt="Capture d’écran 2024-06-20 à 09 11 06" src="https://github.com/Skylhinn/ODA-project/assets/172566328/f5a6ac67-8f68-4aff-8d7c-b91c9c83fa6f">
+
 
 # ~~ **CHINA** ~~
 
-  For China, the top 5 sectors are (1) banking and financial services, (2)energy, (3)industry, mining, construction, (4) other multisector, and (5) transportation and storage. Figure 4. shows that the line of other multisector skyrocketed from around 2015 to 2018, and this project took a closer look and found the reason why it is defined as a "multisector" because it encompasses many sectors at the same time, such as education and transportation, infrastructure projects, and even economics, production, and social sectors at the same time, etc. Most importantly, this project found that for instance, the majority of recipients under the other multisector are invited to the Belt and Road Initiative, except for Mauritius, Gaza, etc, or cross multiple nations. 
 
-Figure 5.
+  For China, the top 5 sectors are (1) banking and financial services, (2)energy, (3)industry, mining, construction, (4) other multisector, and (5) transportation and storage. Figure 2 shows that the line of other multisector skyrocketed from around 2015 to 2018, and this project took a closer look and found the reason why it is defined as a "multisector" because it encompasses many sectors at the same time, such as education and transportation, infrastructure projects, and even economics, production, and social sectors at the same time, etc. 
+
+Figure 2:
+  <img width="558" alt="Capture d’écran 2024-06-20 à 09 07 50" src="https://github.com/Skylhinn/ODA-project/assets/172566328/fac893a7-546b-4ef8-a656-f7631792b497">
+
+  This is interesting considering China's largest donor sector is "Other multi-sector." Our dataset, which includes project descriptions and recipient information, shows that many ODA projects in this sector are directly or indirectly linked to mining, such as vocational schools or transport infrastructure. Most importantly, this project found that for instance, the majority of recipients under the other multisector are invited to the **Belt and Road Initiative**, except for Mauritius, Gaza, etc, or cross multiple nations. 
+
+Figure 3.
 ![sectors_result](https://github.com/Skylhinn/ODA-project/assets/172566692/6ad2caec-9970-447f-b17d-562f3f0157f7)
 
 
 2. REGRESSION ANALYSIS 
 
-We decided to ran a regression analysis to see which sectors are more affected by the donors country GDP. We also chose 3 control variables: the average employment rate, the average human development index and the average Debt/gdp ratio. 
+The next step in our annalysis is running a regression to see which sectors are more affected by the donors country GDP. We also chose 3 control variables: the average employment rate, the average human development index (HDI) and the average Debt/gdp ratio. 
 
 # ~~ **DAC COUNTRIES** ~~
 
@@ -55,14 +63,21 @@ For DAC countries we chose the dates 2004-2019 because they have less data missi
 - Average Human Development Index of DAC countries
 - Average Debt/GDP ratio of DAC countries
 
-The results of the regression showed that for many sectors there is a negative coefficient for the growth rate, this implies that higher growth rates in donor countries are associated with lower ODA allocations to various sectors. Nevertheless the relationship in many cases is non-significant (Sectors with statistically significant results (p-value < 0.05))
+The results of the regression show that for many sectors there is a negative coefficient for the growth rate, this implies that higher growth rates in donor countries are associated with lower ODA allocations to various sectors. Nevertheless the relationship in many cases is non-significant (Sectors with statistically significant results (p-value < 0.05))
+
 
 Focusing on a sector that with a strong statistical significance (significant at the 1% level (p < 0.01).) and a high coefficient that suggests a reliable negative relationship, we conclude that for DAC countries, the sectors that are the most affected by GDP variations are **"Education"** and **Other social infrastructures and services**.
 
-+image regression 
-+
+Coefficient and significance: 
+<img width="470" alt="Capture d’écran 2024-06-04 à 11 11 47" src="https://github.com/Skylhinn/ODA-project/assets/172566328/9020998d-8957-4d8e-969d-d7c67390354f">
 
-The graph clearly shows a steady rise in ODA allocations to the Education sector between 2000 and 2008. However, this upward trend was disrupted by the economic crisis of 2008, and the growth in funding for the Education sector has not resumed its previous trajectory since then. This shows us that GDP variation do affect ODA allocations. 
+<img width="645" alt="Capture d’écran 2024-06-03 à 23 03 32" src="https://github.com/Skylhinn/ODA-project/assets/172566328/9a73c8b2-412e-4443-9a4e-ea14f1f23037">
+
+
+Figure 3:
+<img width="378" alt="Capture d’écran 2024-06-20 à 07 43 46" src="https://github.com/Skylhinn/ODA-project/assets/172566328/7f95094d-4327-4e9b-b5ed-df901ebfa6be">
+
+The graph (figure 3) clearly shows a steady rise in ODA allocations to the Education sector between 2000 and 2008, it's the blue line. However, this upward trend was disrupted by the economic crisis of 2008, shown by the fall in the GDP growth rate (dot line), and the growth in funding for the Education sector has not resumed its previous trajectory since then. This shows us that GDP variation do affect ODA allocations. 
 
 
 
