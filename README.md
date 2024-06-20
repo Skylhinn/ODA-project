@@ -46,8 +46,10 @@ We decided to ran a regression analysis to see which sectors are more affected b
 
 For DAC countries we chose the dates 2004-2019 because they have less data missing 
 **Dependent variable**: Allocations by sector
+
 **Independent variable**:
 - Average Growth Rate of DAC countries
+
 **Control variables**: 
 - Average Employment Rate of DAC countries
 - Average Human Development Index of DAC countries
@@ -55,9 +57,17 @@ For DAC countries we chose the dates 2004-2019 because they have less data missi
 
 The results of the regression showed that for many sectors there is a negative coefficient for the growth rate, this implies that higher growth rates in donor countries are associated with lower ODA allocations to various sectors. Nevertheless the relationship in many cases is non-significant (Sectors with statistically significant results (p-value < 0.05))
 
-Lets focus on a sector that with a strong statistical significance (significant at the 1% level (p < 0.01).) and a high coefficient that suggests a reliable negative relationship: **“EDUCATION“** and **“Other social infrastructures“**
+Focusing on a sector that with a strong statistical significance (significant at the 1% level (p < 0.01).) and a high coefficient that suggests a reliable negative relationship, we conclude that for DAC countries, the sectors that are the most affected by GDP variations are **"Education"** and **Other social infrastructures and services**.
 
-So we conclude that for DAC countries, the sectors that are the most affected by GDP variations are **Education** and **Other social infrastructures and services**
++image regression 
++
+
+The graph clearly shows a steady rise in ODA allocations to the Education sector between 2000 and 2008. However, this upward trend was disrupted by the economic crisis of 2008, and the growth in funding for the Education sector has not resumed its previous trajectory since then. This shows us that GDP variation do affect ODA allocations. 
+
+
+
+
+
 
 
 
@@ -80,7 +90,12 @@ Figure 8.
 
 [Provide a summary of your findings and conclusions, including any recommendations or implications for future research. Be sure to explain how your results address your research question or problem statement.]
 
-Raphaela (DAC) 
+In summary, DAC countries and China prioritize different sectors in their aid allocations: DAC countries tend to focus on social sectors, while China emphasizes economic sectors.
+
+However, regression analysis reveals that, regardless of these priorities, sector allocations —specifically "Education" and "Other social sectors" for DAC countries and "Transportation" for China — are primarily influenced by economic factors, particularly GDP variation. It is important to note, though, that many other sectors showed no significant relationship with GDP variation, indicating that GDP alone cannot fully explain ODA allocation patterns.
+
+To further explore this subject, a more detailed analysis of the recipient countries would be valuable. This deeper examination could provide insights into the motivations and patterns of aid allocation, especially in the context of historical relationships between donor countries and their former colonies. Understanding these dynamics could reveal additional factors beyond GDP variation that impact aid distribution, providing a more comprehensive view of international aid strategies and approaches.
+
   Consistent with Guillion et al., (2020) this project found that China profoundly allocates its ODA to economic sectors. One of the top five sectors, transportation and storage, has the most significant impact on its ODA. Moreover, the ODA for the transportation and storage sector is positively correlated and affected by China's GDP. It suggests that the higher the amount of the ODA of transportation, the higher the GDP, and vice versa. Besides the transportation sector, another spike, in other multisector from around 2015 to 2018, allowed many recipients to achieve cross-sector tasks at the same time. By specifically filtering with other multisector during that time and eliminating BRI members (Nedopil,2023), this project finds most recipients under multisector are BRI members, excluding Gaza, Mauritius, and Sao Tome and Principe.  
   However, one-half of China's lending to developing countries is not recorded in the main international databases used by researchers and practitioners alike. (Horn et al., 2021) Moreover, there are some vague definitions of flow types in data, which were eliminated by this project. Hence, there might be more latent possibilities differentiating significance. Indeed, as Guillion et al. (2020) stated, China puts its policy consideration and national interest first place, but it is controversial but critical to bear in mind that these emerging donors, such as China may incur latent influences on developing countries through their definition of ODA and challenges to DAC. 
 
