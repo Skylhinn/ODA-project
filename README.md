@@ -55,7 +55,7 @@ Finally we added the average GDP growth rate of DAC countries to our dataframe, 
 
 ## File Structure
 
-Attached to this project, you can find our R script and all the original datasets we used in a file called _data sets_.
+Attached to this project, you can find our R script and all the original datasets we used in a new branch called _data sets_.
 
 
 
@@ -149,11 +149,15 @@ To further explore this subject, a more detailed analysis of individual donor co
 
 ## Contributors
 
-[List the contributors to your project and describe their roles and responsibilities.]
+This project has been conducted under the class Professor Pien Torrent *Big Data For Social Social Analysis* of NCCU. Our wonderful team is made of
+安斐拉(112202180) aka Raphaela Nina Andersen
+范友誠(111461006) aka Roger 
+蕭沛欣(112203152) aka Pauline 
+
 
 ## Acknowledgments
 
-Thank you M.Torrent for all the insides, ideas and encouragements that allowed us to 
+Thank you  Professor Pien Torrent for all the insides, ideas and encouragements that allowed us to bring this project to maturity despite all the challenges encountered, thank you also to our TAs Joanna and Maobin.
 
 ## References
 
