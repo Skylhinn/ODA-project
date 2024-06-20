@@ -4,59 +4,47 @@
 ## Project Description
 
 
-  Development aid has been growing for the past decades, and more recently, China appears to be a big donator, alongside the countries from the Development Assistance Committee (DAC).  Our project is a comparison between the Official Development Assistance (ODA) flows of the Development Assistance Committee (DAC) and the ODA of China, with a focus on the sectors these two groups donate to.  Through this project we aim to look at the influence of the GDP on the amounts of ODA flows that one sector gets.  As China announced that it wanted to take an alternative path the development, we came to ask ourselves Do economic recessions have a greater impact on the education sector when donors are DAC countries rather than China?  Through regression analysis, we will bring some tools to answer these kinds of questions.
-  This project is based on the data retrieved from the OECD data bank and China's data is based on Version 3 of Aidata (2024), which previous studies such as Guillon et al. (2020) used, as China is not one of the DAC countries and of course its ODA isn't considered as ODA by these DAC countries. Because of the strict definition of ODA, previous studies either focus on DAC countries or emerging donors, such as China. China has been known for challenging the way how DAC advocates and allocates ODA, and has been reshaping it with its characteristics. (Bräutigam, 2011) In this sense, this project attempts to converge and compare the ODA in two approaches. Most importantly, this project found China mainly allocated its ODA to the economic sectors in the findings of Guillon et al, (2020) so that's one of the incentives to have this project. Moreover, given the official report about ODA from OECD (2023), ODAs are growing because of COVID-19 and the Ukraine-Russia war, but there are inconsistencies hence the project aims to analyze the dynamics of Official Development Assistance (ODA) to uncover patterns, trends, and priorities in international development funding.
-  In short, this project is going to scrutinize the donors' data to analyze how donors allocate their ODA to different sectors, which is the most correlated with donors' GDP. 
+  Development aid has been growing for the past decades, and more recently, China appears to be a big donator, alongside the countries from the Development Assistance Committee (DAC).  Our project is a comparison between the Official Development Assistance (ODA) flows of the Development Assistance Committee (DAC) and the ODA of China, with a focus on the sectors these two groups donate to.  Through this project we aim to look at the influence of GDP on the ODA flows that one sector receives.  Indeed, knowing that China has an alternative approach to development aid, *we ask ourselves what are the differences in sector allocation between DAC countries and China, and whether they respond similarly to economic changes* by using regression analysis.
+  This project is based on the data retrieved from the OECD data bank and China's data is based on Version 3 of Aidata (2024), which previous studies such as Guillon et al. (2020) used, as China is not one of the DAC countries and of course its ODA isn't considered as ODA by these DAC countries. Because of the strict definition of ODA, previous studies either focus on DAC countries or emerging donors, such as China seperately. China has been known for challenging the way how DAC advocates and allocates ODA, and has been reshaping it with its characteristics (Bräutigam, 2011).  In this sense, this project attempts to converge and compare two approaches of ODA.  
+  In short, this project analyze how donors allocate their ODA to different sectors, which is the most correlated with donors' GDP. 
 
 
 
 ## Getting Started
 
-For this project, we use R studio with packages such as dyplr, ggplot2, <<Roger and Raphis put the main packages you used>>.
+For this project, we use R studio with packages such as dyplr, ggplot2, openxlsx, stats.
+
 ###Data cleaning###
 We have to first only keep the DAC countries ODA from the initatial dataset. 
 Then, as China’dataset ranges from 2000 to 2020, We have to filter out DAC countries ODA that fall outside this time frame.  We also turn the values into numerics. 
 
-Every line of the datasets give us important information: the doning contry, the year, the amount and the receiving sectors.  In order ti to do our regression analysis with GDP, we first agregate our all observations from the same sector per year.  
+Each dataset line provides crucial information: donor country, year, amount, and receiving sector. To prepare for regression analysis with GDP, we aggregate all sector observations by year. 
 
-China’s dataset also provides the columns `Description` and `Staff Comments` that we are keep in our cleaned version, these columns will be useful later in the analysis.  
+China's dataset includes additional columns "Description" and "Staff Comments", retained for later analysis.
 
-In order to conduct our regression analysis, we have to make sure that there is no unknown value for the DAC countries dataset; in order to do so, we transform the dataframe into a wide format, and filtered out the missing data.  Finally we converted back to a long format. 
-
-
-**Visualisation of the top receiving sectors**
-To better visualise China’s donations, we use ggplot to look at the top 10 and then top 5 receiving sectors.  
-
-Looking at China top receiving sectors, we realise that the sector « Other Multisector » is amoung one of the largest receiving sector, hence we look at every description of every donation of the year 2017, especially for the African continents because it is the year that records the largest donations.
-
+In order to conduct our regression analysis, we have to make sure that there is no unknown value for the DAC countries dataset; in order to do so, we transform the dataframe into a wide format, and filtered out the missing data.  Finally we transform back to a long format. 
 
 
 ###Getting ready for the regression analysis###
 
-**GDP**
-We get the information of about China’s GDP from the WB dataset.  
-About the DAC countries, we retrieve the data of the DAC countires GDP growth and we do the mean of the countries GDP growth to obtain a DAC countries average GDP growth.
-
 We merge DAC ODA and China ODA dataframes together.  Now it’s time to make our baby dataframe grow by adding the **independent** and the **control variables**.  We aim at bringing our dataframe to maturity to prepare it for the regression! 
+
+**Independent variable - GDP**
+We get the information of China’s GDP from the World Bank dataset.  When it comes to DAC countries, we retrieve the GDP growth rates from OECD datasets.  For DAC countries’ variables, we always compute the average rate of DAC countries, they are considered in our analysis as a group.
 
 With just the *independent variable* added to our merged dataframe, we obtain what we call **our baby blingbling**.
 
 **Control Variables**
 
-For DAC countries’ control varaibles, we always compute the average rate of DAC contries, they are considered in our analysis as a group. 
+First we add the average employment rate of DAC countries, and the unemployment rate of China to our merged dataframe (the reason why we did not use the same control variable for both groups is due to limited availability for DAC countries´ unemployment rates and for China’s employement rates), now our baby dataframes is upgraded to **our toddler blingbling**. 
 
-First we add the average employment rate of DAC countries, and the unemployment rate of China to our merged dataframe (the reason why we did not use the same control variable both groups is because we could not find complete dataset for DAC countries unemployment rate, same for China’s employement rate), now our baby dataframes is upgraded to **our toddler blingbling**. 
+Then, we add Human Development Index (HDI), further upgrading our df to **our teen blingbling**, and public debt, bringing our dataframe to the the quasi-mature stage of **our young adult blingbling**.
 
-Then, we add HDI indicator, further upgrading our df to **our teen blingbling**, and public debt, bringing our dataframe to the the quasi-mature stage of **our young adult blingbling**.
-
-Finally we added the average GDP growth rate of DAC countries to our dataframe, this step was quite challenging, but similarly to bringing a young adult to full maturity, it requires a lot of hardship so we FINALLY achieve the mature stage of **our grown-ass blingbling**. 
-
-
+Finally we add the average GDP growth rate of DAC countries to our dataframe, this step was quite challenging, but similarly to bringing a young adult to full maturity, it requires a lot of hardship so we FINALLY achieve the mature stage of **our grown-ass blingbling**. 
 
 ## File Structure
 
-Attached to this project, you can find our R script and all the original datasets we used in a file called _data sets_.
-
+Attached to this project, you can find our R script and all the original datasets we used in the branch called _data sets_.
 
 
 ## Analysis
@@ -72,13 +60,16 @@ Figure 1:
 
 # ~~ **CHINA** ~~
 
+  **Visualisation of the top receiving sectors**
 
-  For China, the top 5 sectors are (1) banking and financial services, (2)energy, (3)industry, mining, construction, (4) other multisector, and (5) transportation and storage. Figure 2 shows that the line of other multisector skyrocketed from around 2015 to 2018, and this project took a closer look and found the reason why it is defined as a "multisector" because it encompasses many sectors at the same time, such as education and transportation, infrastructure projects, and even economics, production, and social sectors at the same time, etc. 
+  For China, the top 5 sectors are (1)  other multisector, (2) transportation and storage, (3)energy, (4)industry, mining, construction, and (5) banking and financial services. Figure 2 shows that the line of other multisector skyrocketed from around 2015 to 2018, and this project took a closer look and found the reason why it is defined as a "multisector" because it encompasses many sectors at the same time, such as education and transportation, infrastructure projects, and even economics, production, and social sectors at the same time, etc. 
 
 Figure 2:
   <img width="558" alt="Capture d’écran 2024-06-20 à 09 07 50" src="https://github.com/Skylhinn/ODA-project/assets/172566328/fac893a7-546b-4ef8-a656-f7631792b497">
 
   This is interesting considering China's largest donor sector is "Other multi-sector." Our dataset, which includes project descriptions and recipient information, shows that many ODA projects in this sector are directly or indirectly linked to mining, such as vocational schools or transport infrastructure. Most importantly, this project found that for instance, the majority of recipients under the other multisector are invited to the **Belt and Road Initiative**, except for Mauritius, Gaza, etc, or cross multiple nations. 
+
+
 
 Figure 3.
 ![sectors_result](https://github.com/Skylhinn/ODA-project/assets/172566692/6ad2caec-9970-447f-b17d-562f3f0157f7)
@@ -86,7 +77,7 @@ Figure 3.
 
 2. REGRESSION ANALYSIS 
 
-The next step in our annalysis is running a regression to see which sectors are more affected by the donors country GDP. We also chose 3 control variables: the average employment rate, the average human development index (HDI) and the average Debt/gdp ratio. 
+The next step in our annalysis is running a regression to see which sectors are more affected by the donors country GDP with our 3 control variables: the average employment rate, the average human development index (HDI) and the average Debt/gdp ratio. 
 
 # ~~ **DAC COUNTRIES** ~~
 
@@ -104,7 +95,7 @@ For DAC countries we chose the dates 2004-2019 because they have less data missi
 The results of the regression show that for many sectors there is a negative coefficient for the growth rate, this implies that higher growth rates in donor countries are associated with lower ODA allocations to various sectors. Nevertheless the relationship in many cases is non-significant (Sectors with statistically significant results (p-value < 0.05))
 
 
-Focusing on a sector that with a strong statistical significance (significant at the 1% level (p < 0.01).) and a high coefficient that suggests a reliable negative relationship, we conclude that for DAC countries, the sectors that are the most affected by GDP variations are **"Education"** and **Other social infrastructures and services**.
+Focusing on a sector with a strong statistical significance (significant at the 1% level (p < 0.01).) and a high coefficient, that suggests a reliable negative relationship, we conclude that for DAC countries, the sectors that are the most affected by GDP variations are **"Education"** and **Other social infrastructures and services**.
 
 Coefficient and significance: 
 <img width="470" alt="Capture d’écran 2024-06-04 à 11 11 47" src="https://github.com/Skylhinn/ODA-project/assets/172566328/9020998d-8957-4d8e-969d-d7c67390354f">
@@ -121,12 +112,13 @@ The graph (Figure 3) comparing the trajectories of GDP growth (dotted line) and 
 
 # ~~ **CHINA** ~~
 
-For China, we ran the regression analysis to figure out which specific sector has the most significant impact on China's ODA, and it turned out to be the sector of **transportation and storage**. (p<0.001) This project further delves into the correlation coefficient relationship between the ODA in the sector and transportation and storage and GDP. Figure 6. depicts the significant correlation coefficient effect of the sector of transportation on China's GDP. (R=0.53**) Namely, the more amount on transportation and storage, the higher GDP China may accomplish. 
+For China, we run the regression analysis to figure out which specific sector is the most influenced by China´s GDP, and it turned out to be the sector of **transportation and storage**. (p<0.001) This project further delves into the correlation coefficient relationship between the ODA in the sector and transportation and storage and GDP. Figure 6. depicts the significant correlation coefficient effect of the sector of transportation on China's GDP. (R=0.53**) Namely, the more amount on transportation and storage, the higher GDP China may accomplish. 
 
 Figure 6
 ![Trans and GDP](https://github.com/Skylhinn/ODA-project/assets/172566692/1cb6da3d-6eba-47fd-8e64-67127b94103b)
 
-  Generally, this project attempts to discover any predictors of China's ODA and runs the regression analysis with some indicators, such as GDP, Human Development Index, (HDI), and Debt. It turns out that HDI can predict China's ODA, but the effect is very limited. (Figure 7.) With these three indicators, this project also found that there is a negative relationship between Debt and the percentage taking up the amount of China's GDP. It can be interpreted that China is less willing to donate compared to its GDP when it has a higher debt. (Figure 8.)
+
+  Generally, this project attempts to discover any predictors of China's ODA and runs the regression analysis with some indicators, such as GDP, Human Development Index, (HDI), and Debt. It turns out that HDI is also a significant variable to explain China's ODA, but the effect is very limited. (Figure 7.) With these three indicators, this project also found that there is a negative relationship between Debt and the percentage taking up the amount of China's GDP. It can be interpreted that China is less willing to donate compared to its GDP when it has a higher debt. (Figure 8.)
 
 Figure 7.
 ![Rplot04](https://github.com/Skylhinn/ODA-project/assets/172566692/40b41b71-c1ae-4e1f-bea7-2b9be80a8be2)
@@ -134,9 +126,10 @@ Figure 7.
 Figure 8.
 ![Debt and Ratio](https://github.com/Skylhinn/ODA-project/assets/172566692/2ee89db2-e0e7-48fb-b229-5132d5296031)
 
+Consistent with Guillion et al., (2020) this project found that China allocates its ODA to economic sectors. The ODA for the transportation and storage sector is positively correlated and affected by China's GDP. It suggests that the higher the amount of the ODA of transportation, the higher the GDP, and vice versa. Besides the transportation sector, another spike, in other multisector from around 2015 to 2018, allowed many recipients to achieve cross-sector tasks at the same time. By specifically filtering with other multisector during that time and eliminating BRI members (Nedopil,2023), this project finds most recipients under multisector are BRI members, excluding Gaza, Mauritius, and Sao Tome and Principe.  
+  However, one-half of China's lending to developing countries is not recorded in the main international databases used by researchers and practitioners alike. (Horn et al., 2021) Moreover, there are some vague definitions of flow types in data, which were eliminated by this project. Hence, there might be more latent possibilities differentiating significance. Indeed, as Guillion et al. (2020) stated, China puts its policy consideration and national interest first place, but it is controversial but critical to bear in mind that these emerging donors, such as China may incur latent influences on developing countries through their definition of ODA and challenges to DAC. 
+  
 ## Results
-
-[Provide a summary of your findings and conclusions, including any recommendations or implications for future research. Be sure to explain how your results address your research question or problem statement.]
 
 In summary, DAC countries and China prioritize different sectors in their aid allocations: DAC countries tend to focus on social sectors, while China emphasizes economic sectors.
 
@@ -144,16 +137,18 @@ However, regression analysis reveals that, regardless of these priorities, secto
 
 To further explore this subject, a more detailed analysis of individual donor countries and their specific recipient countries would be valuable. Examining these relationships on a country-by-country basis, rather than as a collective DAC bloc, could provide insights into the motivations and patterns of aid allocation. This approach would be particularly informative in understanding the impact of historical relationships between donor countries and their former colonies. Such an analysis could reveal additional factors beyond GDP variation that influence aid distribution, offering a more comprehensive view of international aid strategies and approaches.
 
-  Consistent with Guillion et al., (2020) this project found that China profoundly allocates its ODA to economic sectors. One of the top five sectors, transportation and storage, has the most significant impact on its ODA. Moreover, the ODA for the transportation and storage sector is positively correlated and affected by China's GDP. It suggests that the higher the amount of the ODA of transportation, the higher the GDP, and vice versa. Besides the transportation sector, another spike, in other multisector from around 2015 to 2018, allowed many recipients to achieve cross-sector tasks at the same time. By specifically filtering with other multisector during that time and eliminating BRI members (Nedopil,2023), this project finds most recipients under multisector are BRI members, excluding Gaza, Mauritius, and Sao Tome and Principe.  
-  However, one-half of China's lending to developing countries is not recorded in the main international databases used by researchers and practitioners alike. (Horn et al., 2021) Moreover, there are some vague definitions of flow types in data, which were eliminated by this project. Hence, there might be more latent possibilities differentiating significance. Indeed, as Guillion et al. (2020) stated, China puts its policy consideration and national interest first place, but it is controversial but critical to bear in mind that these emerging donors, such as China may incur latent influences on developing countries through their definition of ODA and challenges to DAC. 
 
 ## Contributors
 
-[List the contributors to your project and describe their roles and responsibilities.]
+This project has been conducted under the class Professor Pien Torrent *Big Data For Social Social Analysis* of NCCU. Our wonderful team is made of
+安斐拉(112202180) aka Raphaela Nina Andersen, mainly worked on priority sectors and regression analysis for DAC countries,
+范友誠(111461006) aka Roger, mainly worked on regression analysis for China and literature review,
+蕭沛欣(112203152) aka Pauline, mainly worked on data cleaning, priority sectors of China and retrieved data for independent and dependent variables (nurturing our baby dataframe to the stage of grow ass blingbling).
+
 
 ## Acknowledgments
 
-Thank you M.Torrent for all the insides, ideas and encouragements that allowed us to 
+Thank you  Professor Pien Torrent for all the insides, ideas and encouragements that allowed us to bring this project to maturity despite all the challenges encountered, thank you also to our TAs Joanna and Maobin.
 
 ## References
 
