@@ -15,6 +15,7 @@
 For this project, we use R studio with packages such as dyplr, ggplot2, openxlsx, stats.
 
 ###Data cleaning###
+
 We have to first only keep the DAC countries ODA from the initatial dataset. 
 Then, as China’dataset ranges from 2000 to 2020, We have to filter out DAC countries ODA that fall outside this time frame.  We also turn the values into numerics. 
 
