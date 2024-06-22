@@ -46,8 +46,9 @@ Finally we add the average GDP growth rate of DAC countries to our dataframe, th
 ## File Structure
 
 Attached to this project, you can find our R script and all the original datasets we used in the branch called _data sets_.
-
-
+**Note: The aid data of China, named "China_Aids" is too big to be attached because of the upload limit, even though it has been compressed.
+        Thus, this project appends the reference to the dataset here. The Chinese aid dataset was retrieved from Aidata, Version 3. (2024)
+        Custer et al. (2023) have tracked Chinese finance and recorded it into a dataset for years, and this project takes advantage of the latest version.
 ## Analysis
 
 1. First, we look for the top 5 sectors that receive the most allocations in order to see the donors priorities.
@@ -153,9 +154,8 @@ Thank you  Professor Pien Torrent for all the insides, ideas and encouragements 
 Aid (ODA) by sector and donor [DAC5] (2024, Mar 27) OECD.  Retrieved from https://data-explorer.oecd.org/vis?fs[0]=Topic%2C1%7CDevelopment%23DEV%23%7COfficial%20Development%20Assistance%20%28ODA%29%23DEV_ODA%23&pg=0&bp=true&snb=11&vw=tb&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_DAC1%40DF_DAC5&df[ag]=OECD.DCD.FSD&df[vs]=1.0&pd=%2C&dq=ALLD.528....Q.&ly[rw]=SECTOR&ly[cl]=TIME_PERIOD&to[TIME_PERIOD]=false&lo=5&lom=LASTNPERIODS 
 Aidata (2024) AidData's Global Chinese Development Finance Dataset (Version 3.0). Retrieved from https://www.aiddata.org/data/aiddatas-global-chinese-development-finance-dataset-version-3-0 
 Bräutigam, D. (2011) Aid ‘with Chinese Characteristics’: Chinese Foreign Aid and Development Finance Meet The OECD-DAC Aid Regime. Journal of International Development. 23. pp.752–764 
-Custer, S., Dreher, A., Elston, T.B., Escobar, B., Fedorochko, R., Fuchs, A., Ghose, S., Lin, J., Malik, A., Parks, B.C., Solomon, K., Strange, A., Tierney, M.J., Vlasto, L., Walsh, K., Wang, F., Zaleski, L., and Zhang, S. 2023. Tracking Chinese Development Finance: An Application of AidData’s TUFF 3.0 Methodology. Williamsburg, VA: AidData at William & Mary.
+Custer, S., Dreher, A., Elston, T.B., Escobar, B., Fedorochko, R., Fuchs, A., Ghose, S., Lin, J., Malik, A., Parks, B.C., Solomon, K., Strange, A., Tierney, M.J., Vlasto, L., Walsh, K., Wang, F., Zaleski, L., and Zhang, S. (2023) Tracking Chinese Development Finance: An Application of AidData’s TUFF 3.0 Methodology. Williamsburg, VA: AidData at William & Mary.
 Dreher, A., Fuchs, A., Parks, B. C., Strange, A., & Tierney, M.J. 2022. Banking on Beijing: The Aims and Impacts of China’s Overseas Development Program. Cambridge, UK: Cambridge University Press.
-Dyvik, E. (2024) Largest donors of humanitarian aid worldwide 2023, by country. Statista. Retrieved from https://www.statista.com/statistics/275597/largers-donor-countries-of-aid-worldwide/
 Guillon, M., Mathonnat, J. (2020) What can we learn on Chinese aid allocation motivations from available data? A sectorial analysis of Chinese aid to African countries. China Economic Review. 60 (2020) 101265.
 Horn, S., Reinhart, C., Trebesch, C. (2021) China's overseas lending. Journal of International Economics 133 (2021) 103539 https://doi.org/10.1016/j.jinteco.2021.103539
 Nedopil, Christoph (2023): “Countries of the Belt and Road Initiative”; Shanghai, Green Finance & Development Center, FISF Fudan University, www.greenfdc.org
